@@ -1,0 +1,43 @@
+<%- include('../templates/head.ejs') %>
+
+<%- include('../templates/header.ejs') %>
+
+<main class="title">
+    <h2 class="productos">Contactanos</h2>
+</main>
+<!-- Formulario Contacto -->
+<section>
+    <form class="formulario contenedor" action="">
+        <fieldset>
+            <legend>
+                Contactános llenando todos los campos
+            </legend>
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label for="" name="nombre">Nombre</label>
+                    <input class="input-text" type="text" placeholder="Ingrese su nombre">
+                </div>
+                <div class="campo">
+                    <label for="" name="telefono">Teléfono</label>
+                    <input class="input-text" type="tel" placeholder="Ingrese su teléfono">
+                </div>
+                <div class="campo">
+                    <label for="" name="correo">Correo</label>
+                    <input class="input-text" type="email" placeholder="Ingrese su correo">
+                </div>
+                <div class="campo">
+                    <label for="" name="mensaje">Mensaje</label>
+                    <textarea class="input-text mensaje" placeholder="Escriba su inquietud"></textarea>
+                </div>
+            </div> <!-- Contenedor campos-->
+            <div class="btn-enviar">
+                <input class="boton boton-sm" type="submit" value="Enviar">
+            </div>
+        </fieldset>
+    </form>
+    <!-- Formulario de Registro -->
+</section>
+
+
+
+<%- include('../templates/footer.ejs') %>

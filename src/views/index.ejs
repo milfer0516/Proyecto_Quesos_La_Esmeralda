@@ -1,0 +1,36 @@
+<%- include('../views/partials/head.ejs') %>
+
+<!-- Header -->
+<%- include('../views/partials/header.ejs') %>
+
+<div class="container p-4 card-product">
+    <div class="row">
+        <div class="col-md-4 m-auto ">
+            <div class="card text-center">
+                <h1>Categoria</h1>
+                <div class="card-body ">
+                    <form action="/categorias" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="cateNombre" placeholder="Categoria Producto"
+                                autofocus>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea name="cateDescripcion" rows="2" class="form-control"
+                                placeholder="Descripcion del producto"></textarea>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <button class="btn btn-success w-100">
+                                Guardar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<%- include('../views/partials/footer.ejs') %>

@@ -1,0 +1,37 @@
+<%- include('../views/partials/head.ejs') %>
+
+<main>
+    <div class="container">
+
+        <table class="table table-bordered table-striped text-center mt-4">
+            <thead>
+                <tr class="bg-primary text-white">
+                    <th scope="col">Identificacion</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Vehiculo</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Contraseña</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% users.forEach((cliente) => { %>
+                <tr>
+                    <td><%= cliente.cliIdentificacion%></td>
+                    <td><%= cliente.cliNombres%></td>
+                    <td><%= cliente.cliApellidos%></td>
+                    <td><%= cliente.cliTelefono%></td>
+                    <td><%= cliente.cliPlacaVehi%></td>
+                    <td><%= cliente.cliCorreo%></td>
+                    <td><%= cliente.cliContrasena%></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </div>
+</main>
+
+<%- include('../views/partials/footer.ejs') %> 

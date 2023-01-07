@@ -1,0 +1,25 @@
+<%- include('../partials/head.ejs') %>
+<!-- Header -->
+<%- include('../partials/header.ejs') %>
+
+<div class="container p-5 mt-5 mx-auto m">
+    <div class="row ">
+        <% results.forEach((categoria) => { %>
+        <div class="col-md-6">
+            <div class="card text-center mt-2">
+                <div class="card-body">
+                    <p>Producto # <%= categoria.idcategorias %> </p>
+                    <h3 class="card-title text-uppercase">
+                        <%= categoria.cateNombre%>
+                    </h3>
+                    <p class="m-2"><%= categoria.cateDescripcion %> </p>
+                    <a href="/update/<%= categoria.idcategorias %> " class="btn btn-secondary mt-2">Modificar</a>
+                    <a href="/delete/<%= categoria.idcategorias %> " class="btn btn-danger mt-2"> Eliminar </a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

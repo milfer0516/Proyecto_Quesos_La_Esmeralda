@@ -1,0 +1,111 @@
+<%- include('../templates/head.ejs') %>
+
+<%- include('../templates/header.ejs') %>
+
+<section class="contenedor">
+    <h2 class="productos centrar-texto">Registrate</h2>
+    <div>
+        <form action="/register" method="POST" class="formulario-registro container-form" id="formulario-registro">
+            <div class="formulario-grupo" id="formulario-grupo">
+                <!-- Grupo: Usuario -->
+                <label for="nombres" class="formulario-label">Nombre Completo</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="text" name="cliNombres" placeholder="Ingrese su nombre"
+                        id="usuario" autofocus required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El usuario debe tener de 4 a 16 dígitos y solo puede contener
+                    números, letras y guíon bajo.</p>
+            </div>
+            <!-- Grupo: Nombre -->
+            <!-- <div>
+                <label for="apellidos" class="formulario-label">Apellidos</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="text" name="cliApellidos" placeholder="Ingrese su apellido"
+                        id="nombre">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El nombre debe tener de 4 a 16 dígitos y solo puede contener
+                    números, letras y guíon bajo.</p>
+            </div> -->
+            <!-- Grupo: Contraseña -->
+            <div>
+                <label for="identificacion" class="formulario-label">Identificación</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="text" name="cliIdentificacion" id="identificacion"
+                        placeholder="Ingrese su identificación" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+            </div>
+
+            <!-- Grupo: Repetir Contraseña -->
+            <div>
+                <label for="password" class="formulario-label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="password" name="cliContrasena" id="password" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <!-- <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p> -->
+            </div>
+            <!-- Grupo: Correo Electrónico -->
+            <div>
+                <label for="correo" class="formulario-label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="email" name="cliCorreo" placeholder="john@correo.com"
+                        id="correo" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El correo solo contener letras, puntos, guiones y guion bajo.</p>
+            </div>
+            <!-- Grupo: Teléfono -->
+            <div>
+                <label for="telefono" class="formulario-label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="tel" name="cliTelefono" placeholder="3003456789"
+                        id="usuario">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono solo puede contener 14 dígitos.</p>
+            </div>
+            <div>
+                <label for="placa" class="formulario-label">Placa Vehiculo</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="text" name="cliPlacaVehi"
+                        placeholder="Ingresa la placa del vehiculo" id="usuario" required>
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono solo puede contener 14 dígitos.</p>
+            </div>
+            <!-- Grupo: Terminos -->
+            <div class="formulario__grupo-terminos">
+                <label class="formulario-label">
+                    <input class="formulario-checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los Terminos y Condiciones
+                </label>
+
+            </div>
+            <div>
+                <label class="link-regitro">
+                    <p class="formlario-ingresar">¿Ya estas registrado?<a href="/login">Ingresa aquí</a>
+                    </p>
+                </label>
+            </div>
+            <!-- Grupo: Mensaje Error -->
+            <div class="formulario-mensaje">
+                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellenar el
+                    formulario
+                    correctamente</p>
+            </div>
+            <!-- Grupo: Boton  -->
+            <div class="formulario__grupo-btn-enviar">
+                <button class="formulario__btn" type="submit">Registrarse</button>
+            </div>
+    </div>
+
+    </form>
+    </div>
+</section>
+
+
+<%- include('../templates/footer.ejs') %>
